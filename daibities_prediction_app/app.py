@@ -6,8 +6,8 @@ import pickle
 # ----------------------------------------
 # Load Model and Scaler
 # ----------------------------------------
-model = pickle.load(open("daibities_prediction_app\model.pkl", "rb"))
-scaler = pickle.load(open("daibities_prediction_app\scaler.pkl", "rb"))
+model = pickle.load(open("daibities_prediction_app/model.pkl", "rb"))
+scaler = pickle.load(open("daibities_prediction_app/scaler.pkl", "rb"))
 
 # ----------------------------------------
 # Streamlit UI
@@ -92,4 +92,5 @@ if st.button("Predict"):
         st.error(f"🔴 **Diabetes Detected** (Probability: {prob:.2f})")
     else:
         st.success(f"🟢 **No Diabetes** (Probability: {prob:.2f})")
+
 
